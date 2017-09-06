@@ -17,6 +17,7 @@ exports.dirs = {
 }
 
 exports.app = require(path.join(exports.dirs.root, 'package.json'))
+exports.cache = require(path.join(exports.dirs.lib, 'cache.js'))
 
 const CONFIG_FILE = path.join(exports.dirs.root, 'config.json')
 

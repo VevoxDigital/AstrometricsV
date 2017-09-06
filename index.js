@@ -30,13 +30,12 @@ App.util.initConfig().then(() => {
   const uri = `${c.get('database:type')}://${c.get('database:host')}:${c.get('database:port')}/${c.get('database:database')}`
   App.log.info(`connecting to <${uri}> with ${options.user ? 'username ' + options.user : 'no auth'}`)
   mongoose.Promise = q.Promise
-  mongoose.connect(uri, options).then(() => {
-    // database connection was successful
-    App.log.info('conneced to database successfully')
+  mongoose.connect(uri, options).then(App.util.cache.connect).then(() => {
+    App.log.info('database connected successfully')
 
     // PAUSE
   }).catch(err => {
-    App.log.error('failed to connect to the database')
+    App.log.error('failed to connect to the database or cache')
     App.log.dumpError(err)
   }).done()
 }).catch(err => {
