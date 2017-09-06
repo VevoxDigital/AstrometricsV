@@ -1,2 +1,4 @@
-# AstrometricsV
-Open-source item data and market information database tool for Eve Online
+# Astrometrics V
+*Open-source universe data and market metrics database tool for Eve Online.*
+
+**TODO** Write desc

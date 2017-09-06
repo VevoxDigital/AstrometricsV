@@ -1,0 +1,61 @@
+{
+  "name": "astrometrics-5",
+  "version": "0.1.0",
+  "description": "Open-source universe data and market metrics tool for EVE Online",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VevoxDigital/AstrometricsV.git"
+  },
+  "config": {
+    "port": 3005,
+    "logs": {
+      "dir": "./logs",
+      "useJSON": false
+    },
+    "database": {
+      "type": "mongodb",
+      "host": "localhost",
+      "database": "astrometrics-5",
+      "port": 27017,
+      "auth": {
+        "username": "root",
+        "password": ""
+      }
+    }
+  },
+  "keywords": [
+    "eve",
+    "eve-online",
+    "database"
+  ],
+  "standard": {
+    "globals": [
+      "App",
+      "describe",
+      "it",
+      "before",
+      "beforeEach"
+    ]
+  },
+  "author": "Vevox Digital",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VevoxDigital/AstrometricsV/issues"
+  },
+  "homepage": "https://github.com/VevoxDigital/AstrometricsV#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "fs-extra": "^4.0.1",
+    "mongoose": "^4.11.10",
+    "nconf": "^0.8.4",
+    "path": "^0.12.7",
+    "q": "^1.5.0",
+    "winston": "^2.3.1",
+    "winston-daily-rotate-file": "^1.4.6"
+  }
+}
